@@ -2,6 +2,8 @@ import { List } from './style'
 import CharacterCard from '../CharacterCard/CharacterCard'
 
 const CharacterList = ({ characters }) => {
+  if (!characters || characters.length === 0) return null
+
   return (
     <List>
       {characters.map((singleCharacter) => {
@@ -9,7 +11,7 @@ const CharacterList = ({ characters }) => {
           <CharacterCard
             key={singleCharacter.id}
             name={singleCharacter.name}
-            img_url={singleCharacter.img_url}
+            imgUrl={singleCharacter.img_url}
           />
         )
       })}

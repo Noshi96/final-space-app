@@ -1,9 +1,9 @@
 import { Card, Name, Image } from './style'
 
-const CharacterCard = ({ name, img_url }) => {
+const CharacterCard = ({ name, imgUrl }) => {
   return (
     <Card>
-      <Image src={img_url} alt={name} />
+      <Image src={imgUrl} alt={name} />
       <Name>{name}</Name>
     </Card>
   )

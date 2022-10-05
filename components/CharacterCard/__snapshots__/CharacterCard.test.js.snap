@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterCard renders character list 1`] = `
+<div>
+  <div
+    class="sc-7786e022-0 hGLfzY"
+  >
+    <img
+      alt="Gary Goodspeed"
+      class="sc-7786e022-2 cLquHY"
+    />
+    <div
+      class="sc-7786e022-1 dtZBjv"
+    >
+      Gary Goodspeed
+    </div>
+  </div>
+</div>
+`;
