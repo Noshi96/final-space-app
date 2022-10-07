@@ -7,7 +7,6 @@ export const Card = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 1rem;
   padding-bottom: 1rem;
   text-align: center;
   box-shadow: 0px 4px 4px rgba(81, 81, 81, 0.16);
