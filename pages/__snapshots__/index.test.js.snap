@@ -1,0 +1,668 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render Home page 1`] = `
+<div>
+  <div
+    class="sc-e4f7e63c-0 gaCDvv"
+  >
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Gary Goodspeed"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Gary Goodspeed
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Mooncake"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/mooncake.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Mooncake
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Quinn Ergon"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/quinn_ergon.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Quinn Ergon
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Little Cato"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/little_cato.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Little Cato
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Avocato"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/avocato.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Avocato
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="KVN"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/kvn.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        KVN
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Ash Graven"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/ash_graven.png"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Ash Graven
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Fox"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/fox.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Fox
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="H.U.E"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/hue.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        H.U.E
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Tribore Menendez"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/tribore.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Tribore Menendez
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Clarence"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/clarence.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Clarence
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Biskit"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/biskit.png"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Biskit
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Quatronostro Menendez"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/quatro.png"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Quatronostro Menendez
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Lord Commander"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/lord_commander.png"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Lord Commander
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt=" Sheryl Goodspeed"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/sheryl_goodspeed.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+         Sheryl Goodspeed
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Bolo"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/bolo.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Bolo
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Invictus"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/invictus.png"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Invictus
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Gary Goodspeed (Nightfall's timeline)"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/gg_timeline.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Gary Goodspeed (Nightfall's timeline)
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Nightfall"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/nightfall.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Nightfall
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="John Goodspeed"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/john_goodspeed.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        John Goodspeed
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="A.V.A"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/ava.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        A.V.A
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Evra"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/evra.png"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Evra
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Queen of Ventrexia"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/queen_of_ventrexia.png"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Queen of Ventrexia
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="King of Ventrexia"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/king_of_ventrexia.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        King of Ventrexia
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Mega-KVN"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/mega_kvn.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Mega-KVN
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Gatekeeper"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/gatekeeper.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Gatekeeper
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Melanie Dewinter"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/melanie_dewinter.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Melanie Dewinter
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Harp Graven"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/harp_graven.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Harp Graven
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt=" Shannon Thunder"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/shannon_thunder.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+         Shannon Thunder
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Chuck"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/chuck.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Chuck
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Septim"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/septim.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Septim
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Fraskenhaur"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/fraskenhaur.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Fraskenhaur
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Dartrichio"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/dartrichio.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Dartrichio
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="David Dewinter"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/david_dewinter.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        David Dewinter
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="General Cataloupe"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/general_cataloupe.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        General Cataloupe
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Jeff"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/jeff.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Jeff
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Meowlapeño"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/meowlapeno.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Meowlapeño
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Oreskis"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/oreskis.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Oreskis
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Sal"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/sal.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Sal
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Terk"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/terk.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Terk
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="The Blade"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/the_blade.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        The Blade
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Thud"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/thud.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Thud
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Time Swap Sammy"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/time_swap_sammy.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Time Swap Sammy
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Todd H. Watson"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/todd_h_watson.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Todd H. Watson
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Viro"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/viro.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Viro
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Werthrent"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/werthrent.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Werthrent
+      </div>
+    </div>
+    <div
+      class="sc-7786e022-0 hGLfzY"
+    >
+      <img
+        alt="Zargon Tukalishi"
+        class="sc-7786e022-2 cLquHY"
+        src="https://finalspaceapi.com/api/character/avatar/zargon_tukalishi.jpg"
+      />
+      <div
+        class="sc-7786e022-1 dtZBjv"
+      >
+        Zargon Tukalishi
+      </div>
+    </div>
+  </div>
+</div>
+`;
