@@ -12,6 +12,7 @@ const CharacterList = ({ characters }) => {
             key={singleCharacter.id}
             name={singleCharacter.name}
             imgUrl={singleCharacter.img_url}
+            id={singleCharacter.id}
           />
         )
       })}
