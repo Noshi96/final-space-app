@@ -2,7 +2,7 @@ import { Card, Name, Image } from './style'
 import useModal from '../../hooks/useModal'
 import CardDetailsModal from '../CardDetailsModal/CardDetailsModal'
 
-const CharacterCard = ({ name, imgUrl, id }) => {
+const CharacterCard = ({ name, imgUrl, id, singleCharacter }) => {
   const { isOpen, toggle } = useModal()
 
   return (
@@ -11,7 +11,12 @@ const CharacterCard = ({ name, imgUrl, id }) => {
         <Image src={imgUrl} alt={name} />
         <Name>{name}</Name>
       </Card>
-      <CardDetailsModal isOpen={isOpen} closeModal={toggle} id={id} />
+      <CardDetailsModal
+        isOpen={isOpen}
+        closeModal={toggle}
+        id={id}
+        singleCharacter={singleCharacter}
+      />
     </>
   )
 }

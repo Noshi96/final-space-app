@@ -7,20 +7,17 @@ import {
   Image,
   StyledIcon,
   Name,
-  Origin,
   AddToFavoriteButton,
-  Status,
-  Species,
 } from './style'
 import { createPortal } from 'react-dom'
-import CharactersContext from '../../store/characters-context'
+import EpisodesContext from '../../store/episodes-context'
 import { useContext } from 'react'
+import IconList from '../IconList/IconList'
 
-const CardDetailsModal = ({ isOpen, closeModal, id }) => {
-  const { characters } = useContext(CharactersContext)
-  const { name, img_url, origin, gender, status, species } = characters.find(
-    (ch) => ch.id === id
-  )
+const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
+  const { name, img_url, origin, gender, status, species } = singleCharacter
+  const { occurrenceOfAllCharactersInAllEpisodes } = useContext(EpisodesContext)
+  const countOccurrence = occurrenceOfAllCharactersInAllEpisodes[id] ?? 0
 
   return isOpen
     ? createPortal(
@@ -35,7 +32,6 @@ const CardDetailsModal = ({ isOpen, closeModal, id }) => {
           >
             <Modal onClick={(e) => e.stopPropagation()}>
               <ModalHeader>
-                <AddToFavoriteButton>Add to Favorite</AddToFavoriteButton>
                 <ModalCloseButton
                   type="button"
                   data-dismiss="modal"
@@ -54,24 +50,13 @@ const CardDetailsModal = ({ isOpen, closeModal, id }) => {
                   <StyledIcon female={gender} name={gender.toLowerCase()} />
                 )}
               </Name>
-              <Origin>
-                <StyledIcon name="public" />
-                {origin !== 'Unknown' ? `Born on ${origin}` : 'Unknown'}
-              </Origin>
-              <Status>
-                {status === 'Alive' ? (
-                  <StyledIcon status={status} name="favorite" />
-                ) : status === 'Deceased' ? (
-                  <StyledIcon status={status} name="heart_broken" />
-                ) : (
-                  <StyledIcon name="question_mark" />
-                )}
-                Is {status.toLowerCase()}
-              </Status>
-              <Species>
-                <StyledIcon name="group" />
-                {species}
-              </Species>
+              <IconList
+                origin={origin}
+                status={status}
+                species={species}
+                occurrence={countOccurrence}
+              />
+              <AddToFavoriteButton>Add to favorite</AddToFavoriteButton>
             </Modal>
           </ModalWrapper>
         </>,

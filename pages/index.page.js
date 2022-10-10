@@ -1,22 +1,24 @@
-import { getCharacters } from '../services/external-api'
+import { getCharacters, getEpisodes } from '../services/external-api'
 import dummy from '../dummy.json'
+import dummyEpisode from '../dummy-episode.json'
 import CharacterList from '../components/CharacterList/CharacterList'
-import { CharactersContextProvider } from '../store/characters-context'
+import { EpisodesContextProvider } from '../store/episodes-context'
 
-export default function Home({ characters }) {
+export default function Home({ characters, episodes }) {
   return (
-    <CharactersContextProvider characters={characters}>
+    <EpisodesContextProvider episodes={episodes}>
       <CharacterList characters={characters}></CharacterList>
-    </CharactersContextProvider>
+    </EpisodesContextProvider>
   )
 }
 
 export async function getServerSideProps() {
-  const resData = await getCharacters()
-
+  const resDataCharacters = await getCharacters()
+  const resDataEpisodes = await getEpisodes()
   return {
     props: {
-      characters: resData.data,
+      characters: resDataCharacters.data,
+      episodes: resDataEpisodes.data,
     },
   }
 }

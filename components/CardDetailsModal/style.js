@@ -33,20 +33,26 @@ export const Modal = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
+  width: 16rem;
+
   color: #484848;
   align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   background: #ffffff;
 
   box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
     0px 8px 8px -4px rgba(16, 24, 40, 0.03);
-  border-radius: 12px;
+  border-radius: 24px;
+
+  @media only screen and (min-width: 48rem) {
+    width: 19.5rem;
+    transform: translate(0%, -50%);
+  }
 `
 
 export const ModalHeader = styled.div`
@@ -70,21 +76,33 @@ export const ButtonDefault = styled.div`
 `
 
 export const Image = styled.img`
-  width: 16rem;
-  border-radius: 12px;
-  display: flex;
-  justify-self: start;
+  width: 160%;
+  border-radius: 24px;
+  box-shadow: 0px 6px 22px #000;
+
+  @media only screen and (min-width: 48rem) {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-145%, -50%);
+  }
 `
+
+export const Name = styled.h2`
+  margin-top: 1rem;
+  width: 100%;
+  @media only screen and (min-width: 48rem) {
+    margin-top: 0rem;
+  }
+`
+
 export const StyledIcon = styled(Icon)`
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
   color: ${(props) =>
     props.female === 'Female'
       ? '#E91E63;'
       : props.female === 'Male'
-      ? '#2196F3;'
-      : props.status === 'Alive'
-      ? '#D32F2F;'
-      : props.status === 'Deceased'
       ? '#2196F3;'
       : '#000;'};
 
@@ -96,43 +114,30 @@ export const StyledIcon = styled(Icon)`
       : '0;'};
 `
 
-export const Name = styled.h2`
-  width: 100%;
-`
-export const Origin = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-`
-
 export const AddToFavoriteButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1rem;
-
+  margin-top: 1rem;
   width: 10rem;
   height: 2.5rem;
-
   background: #7f56d9;
-
   border: 1px solid #7f56d9;
-
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-  border-radius: 8px;
-
+  border-radius: 24px;
   color: #fff;
   cursor: pointer;
-`
 
-export const Status = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-`
+  &:hover {
+    background: #7f56a9;
+    border: 1px solid #7f56a9;
+    box-shadow: 0px 5px 2px rgba(16, 24, 40, 0.05);
+  }
 
-export const Species = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
+  &:active {
+    background: #7f56d9;
+    border: 1px solid #7f56d9;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  }
 `

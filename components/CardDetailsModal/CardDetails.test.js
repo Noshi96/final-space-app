@@ -1,9 +1,9 @@
 /* globals describe, it, expect  */
 
 import { render } from '@testing-library/react'
-import CharacterCard from './CharacterCard'
+import CardDetailsModal from './CardDetailsModal'
 
-describe('CharacterCard', () => {
+describe('CardDetailsModal', () => {
   const singleCharacter = {
     id: 1,
     name: 'Gary Goodspeed',
@@ -26,16 +26,15 @@ describe('CharacterCard', () => {
       'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png',
   }
 
-  it('renders character card', () => {
-    const characterCard = render(
-      <CharacterCard
-        key={singleCharacter.id}
-        name={singleCharacter.name}
-        imgUrl={singleCharacter.img_url}
+  it('renders details modal', () => {
+    const cardDetailsModal = render(
+      <CardDetailsModal
+        isOpen={true}
+        closeModal={() => {}}
         id={singleCharacter.id}
         singleCharacter={singleCharacter}
       />
     )
-    expect(characterCard.container).toMatchSnapshot()
+    expect(cardDetailsModal.container).toMatchSnapshot()
   })
 })
