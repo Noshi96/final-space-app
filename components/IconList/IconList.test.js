@@ -1,9 +1,9 @@
-/* globals describe, it, expect  */
+/* globals describe, expect, it */
 
 import { render } from '@testing-library/react'
-import CharacterCard from './CharacterCard'
+import IconList from './IconList'
 
-describe('CharacterCard', () => {
+describe('Icon', () => {
   const singleCharacter = {
     id: 1,
     name: 'Gary Goodspeed',
@@ -25,17 +25,17 @@ describe('CharacterCard', () => {
     img_url:
       'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png',
   }
+  const countOccurrence = 22
 
-  it('renders character card', () => {
-    const characterCard = render(
-      <CharacterCard
-        key={singleCharacter.id}
-        name={singleCharacter.name}
-        imgUrl={singleCharacter.img_url}
-        id={singleCharacter.id}
-        singleCharacter={singleCharacter}
+  it('renders IconList', () => {
+    const iconList = render(
+      <IconList
+        origin={singleCharacter.origin}
+        status={singleCharacter.status}
+        species={singleCharacter.species}
+        occurrence={countOccurrence}
       />
     )
-    expect(characterCard.container).toMatchSnapshot()
+    expect(iconList.container).toMatchSnapshot()
   })
 })

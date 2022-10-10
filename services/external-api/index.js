@@ -13,3 +13,7 @@ const instance = axios.create({
 export const getCharacters = async () => {
   return instance.get('/character')
 }
+
+export const getEpisodes = async () => {
+  return instance.get('/episode')
+}
