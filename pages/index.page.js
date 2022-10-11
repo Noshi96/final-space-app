@@ -4,21 +4,21 @@ import dummyEpisode from '../dummy-episode.json'
 import CharacterList from '../components/CharacterList/CharacterList'
 import { EpisodesContextProvider } from '../store/episodes-context'
 
-export default function Home() {
+export default function Home({ characters, episodes }) {
   return (
-    <EpisodesContextProvider episodes={dummyEpisode}>
-      <CharacterList characters={dummy}></CharacterList>
+    <EpisodesContextProvider episodes={episodes}>
+      <CharacterList characters={characters}></CharacterList>
     </EpisodesContextProvider>
   )
 }
 
-// export async function getServerSideProps() {
-//   const resDataCharacters = await getCharacters()
-//   const resDataEpisodes = await getEpisodes()
-//   return {
-//     props: {
-//       characters: resDataCharacters.data,
-//       episodes: resDataEpisodes.data,
-//     },
-//   }
-// }
+export async function getServerSideProps() {
+  const resDataCharacters = await getCharacters()
+  const resDataEpisodes = await getEpisodes()
+  return {
+    props: {
+      characters: resDataCharacters.data,
+      episodes: resDataEpisodes.data,
+    },
+  }
+}
