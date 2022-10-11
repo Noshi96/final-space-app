@@ -7,7 +7,7 @@ import { EpisodesContextProvider } from '../store/episodes-context'
 export default function Home({ characters, episodes }) {
   return (
     <EpisodesContextProvider episodes={episodes}>
-      <CharacterList characters={characters}></CharacterList>
+      <CharacterList characters={characters} />
     </EpisodesContextProvider>
   )
 }
