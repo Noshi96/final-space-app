@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const getApiURL = () => {
-  return process.env.NEXT_PUBLIC_FINAL_SPACE_API
+  return process.env.NEXT_PUBLIC_FINAL_SPACE_API_VERCEL
 }
 
 const instance = axios.create({
@@ -11,7 +11,6 @@ const instance = axios.create({
 })
 
 export const getCharacters = async () => {
-  console.log(getApiURL())
   return instance.get('/character')
 }
 
