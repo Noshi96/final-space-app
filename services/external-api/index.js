@@ -5,15 +5,15 @@ const getApiURL = () => {
 }
 
 const instance = axios.create({
-  baseURL: getApiURL(),
+  baseURL: '',
   responseType: 'json',
   withCredentials: true,
 })
 
 export const getCharacters = async () => {
-  return instance.get('/character')
+  return instance.get('https://finalspaceapi.com/api/v0/character')
 }
 
 export const getEpisodes = async () => {
-  return instance.get('/episode')
+  return instance.get('https://finalspaceapi.com/api/v0/episode')
 }
