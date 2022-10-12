@@ -72,7 +72,7 @@ const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
         </ModalWrapper>
       </>,
       document.body
-      )
+    )
     : null
 }
 

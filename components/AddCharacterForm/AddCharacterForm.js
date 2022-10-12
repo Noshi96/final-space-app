@@ -168,7 +168,7 @@ const AddCharacterForm = ({ isOpen, closeModal }) => {
         </ModalWrapper>
       </>,
       document.body
-      )
+    )
     : null
 }
 export default AddCharacterForm
