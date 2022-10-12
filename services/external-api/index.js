@@ -7,7 +7,7 @@ const getApiURL = () => {
 const instance = axios.create({
   baseURL: getApiURL(),
   responseType: 'json',
-  withCredentials: true,
+  withCredentials: true
 })
 
 export const getCharacters = async () => {

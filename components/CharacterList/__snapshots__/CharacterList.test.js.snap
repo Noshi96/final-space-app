@@ -3,18 +3,18 @@
 exports[`CharacterList renders character list 1`] = `
 <div>
   <div
-    class="sc-da2bec26-0 cIXBnP"
+    class="sc-bf67b12f-0 chicQa"
   >
     <div
-      class="sc-d6cb549b-0 jisOga"
+      class="sc-57d00609-0 dMPESy"
     >
       <img
         alt="Gary Goodspeed"
-        class="sc-d6cb549b-2 cVwxUm"
+        class="sc-57d00609-2 ivIxvq"
         src="https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png"
       />
       <div
-        class="sc-d6cb549b-1 dfxNAZ"
+        class="sc-57d00609-1 gmJAWB"
       >
         Gary Goodspeed
       </div>

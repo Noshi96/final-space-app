@@ -3,7 +3,7 @@ import { useState } from 'react'
 const useModal = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  function toggle() {
+  function toggle () {
     setIsOpen((prevState) => !prevState)
     if (isOpen) {
       document.body.style.overflow = ''

@@ -2,7 +2,7 @@ import 'normalize.css/normalize.css'
 import '../styles/globals.css'
 import 'material-icons/iconfont/material-icons.css'
 
-function MyApp({ Component, pageProps }) {
+function MyApp ({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 

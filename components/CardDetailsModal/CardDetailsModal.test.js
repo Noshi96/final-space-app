@@ -20,16 +20,16 @@ describe('CardDetailsModal', () => {
       'Weapons: Black hole gun (briefly)',
       'Weapons: Robot arm',
       'Weapons: Laser gun',
-      'Weapons: Laser sword',
+      'Weapons: Laser sword'
     ],
     img_url:
-      'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png',
+      'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png'
   }
 
   it('renders details modal', () => {
     const cardDetailsModal = render(
       <CardDetailsModal
-        isOpen={true}
+        isOpen
         closeModal={() => {}}
         id={singleCharacter.id}
         singleCharacter={singleCharacter}

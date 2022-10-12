@@ -29,7 +29,7 @@ describe('CharacterList', () => {
         'Harry Hoodseed (by Tribore)',
         'Leslie (by Tribore)',
         'Barry (by Tribore)',
-        'The Fool Who Died A Thousand Deaths (by Invictus)',
+        'The Fool Who Died A Thousand Deaths (by Invictus)'
       ],
       origin: 'Earth',
       abilities: [
@@ -40,11 +40,11 @@ describe('CharacterList', () => {
         'Weapons: Black hole gun (briefly)',
         'Weapons: Robot arm',
         'Weapons: Laser gun',
-        'Weapons: Laser sword',
+        'Weapons: Laser sword'
       ],
       img_url:
-        'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png',
-    },
+        'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png'
+    }
   ]
 
   it('renders character list', () => {
