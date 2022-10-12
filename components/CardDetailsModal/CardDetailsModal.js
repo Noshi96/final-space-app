@@ -48,7 +48,9 @@ const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
                 <StyledIcon name='close' />
               </ModalCloseButton>
             </ModalHeader>
+
             <Image src={imgUrl} alt={name} />
+
             <Name>
               {name}
               {gender !== 'Male' && gender !== 'Female'

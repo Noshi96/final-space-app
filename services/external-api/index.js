@@ -1,7 +1,10 @@
 import axios from 'axios'
 
 const getApiURL = () => {
-  return process.env.NEXT_PUBLIC_FINAL_SPACE_API_VERCEL
+  return (
+    process.env.NEXT_PUBLIC_FINAL_SPACE_API_VERCEL ??
+    process.env.NEXT_PUBLIC_FINAL_SPACE_API
+  )
 }
 
 const instance = axios.create({
