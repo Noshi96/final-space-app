@@ -2,7 +2,7 @@ import { createContext } from 'react'
 import { efficientOccurrenceCounting } from '../utils/efficientOccurrenceCounting'
 
 const EpisodesContext = createContext({
-  occurrenceOfAllCharactersInAllEpisodes: {},
+  occurrenceOfAllCharactersInAllEpisodes: {}
 })
 
 export const EpisodesContextProvider = ({ episodes, children }) => {
@@ -11,7 +11,7 @@ export const EpisodesContextProvider = ({ episodes, children }) => {
   )
 
   const context = {
-    occurrenceOfAllCharactersInAllEpisodes: occurrenceOfAllCharactersInAllEpisodes,
+    occurrenceOfAllCharactersInAllEpisodes
   }
 
   return (

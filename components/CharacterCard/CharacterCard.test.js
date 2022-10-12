@@ -20,10 +20,10 @@ describe('CharacterCard', () => {
       'Weapons: Black hole gun (briefly)',
       'Weapons: Robot arm',
       'Weapons: Laser gun',
-      'Weapons: Laser sword',
+      'Weapons: Laser sword'
     ],
     img_url:
-      'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png',
+      'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png'
   }
 
   it('renders character card', () => {
