@@ -12,12 +12,14 @@ export const StyledIcon = styled(Icon)`
 `
 
 export const List = styled.ul`
+  grid-row: 4 / 5;
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
   margin-top: 1.5rem;
   margin-right: 1rem;
-  padding: 0rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   text-decoration: none;
 `
 

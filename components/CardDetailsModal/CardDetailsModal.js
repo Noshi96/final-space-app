@@ -7,7 +7,8 @@ import {
   Image,
   StyledIcon,
   Name,
-  AddToFavoriteButton
+  AddToFavoriteButton,
+  CardDetails
 } from './style'
 import { createPortal } from 'react-dom'
 import EpisodesContext from '../../store/episodes-context'
@@ -38,6 +39,7 @@ const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
           onClick={closeModal}
         >
           <Modal onClick={(e) => e.stopPropagation()}>
+            <Image src={imgUrl} alt={name} />
             <ModalHeader>
               <ModalCloseButton
                 type='button'
@@ -49,25 +51,25 @@ const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
               </ModalCloseButton>
             </ModalHeader>
 
-            <Image src={imgUrl} alt={name} />
-
-            <Name>
-              {name}
-              {gender !== 'Male' && gender !== 'Female'
-                ? (
-                    ''
-                  )
-                : (
-                  <StyledIcon female={gender} name={gender.toLowerCase()} />
-                  )}
-            </Name>
-            <IconList
-              origin={origin}
-              status={status}
-              species={species}
-              occurrence={countOccurrence}
-            />
-            <AddToFavoriteButton>Add to favorite</AddToFavoriteButton>
+            <CardDetails>
+              <Name>
+                {name}
+                {gender !== 'Male' && gender !== 'Female'
+                  ? (
+                      ''
+                    )
+                  : (
+                    <StyledIcon female={gender} name={gender.toLowerCase()} />
+                    )}
+              </Name>
+              <IconList
+                origin={origin}
+                status={status}
+                species={species}
+                occurrence={countOccurrence}
+              />
+              <AddToFavoriteButton>Add to favorite</AddToFavoriteButton>
+            </CardDetails>
           </Modal>
         </ModalWrapper>
       </>,

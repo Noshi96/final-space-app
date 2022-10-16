@@ -3,23 +3,23 @@
 exports[`Icon renders IconList 1`] = `
 <div>
   <ul
-    class="sc-1bdc4148-1 hAQdAy"
+    class="sc-c4342ac9-1 guIfcn"
   >
     <li
-      class="sc-1bdc4148-2 jveMor"
+      class="sc-c4342ac9-2 kBpwcf"
     >
       <span
-        class="material-icons sc-1bdc4148-0 bdYlV"
+        class="material-icons sc-c4342ac9-0 jEsdHR"
       >
         public
       </span>
       Born on Earth
     </li>
     <li
-      class="sc-1bdc4148-2 jveMor"
+      class="sc-c4342ac9-2 kBpwcf"
     >
       <span
-        class="material-icons sc-1bdc4148-0 bWLlSS"
+        class="material-icons sc-c4342ac9-0 hGdQyi"
       >
         favorite
       </span>
@@ -27,20 +27,20 @@ exports[`Icon renders IconList 1`] = `
       alive
     </li>
     <li
-      class="sc-1bdc4148-2 jveMor"
+      class="sc-c4342ac9-2 kBpwcf"
     >
       <span
-        class="material-icons sc-1bdc4148-0 bdYlV"
+        class="material-icons sc-c4342ac9-0 jEsdHR"
       >
         group
       </span>
       Human
     </li>
     <li
-      class="sc-1bdc4148-2 jveMor"
+      class="sc-c4342ac9-2 kBpwcf"
     >
       <span
-        class="material-icons sc-1bdc4148-0 bdYlV"
+        class="material-icons sc-c4342ac9-0 jEsdHR"
       >
         video_file
       </span>
