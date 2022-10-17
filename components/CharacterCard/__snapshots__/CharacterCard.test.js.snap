@@ -4,6 +4,7 @@ exports[`CharacterCard renders character card 1`] = `
 <div>
   <div
     class="sc-d6cb549b-0 jisOga"
+    tabindex="0"
   >
     <img
       alt="Gary Goodspeed"

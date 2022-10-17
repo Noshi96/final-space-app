@@ -7,6 +7,7 @@ exports[`CharacterList renders character list 1`] = `
   >
     <div
       class="sc-d6cb549b-0 jisOga"
+      tabindex="0"
     >
       <img
         alt="Gary Goodspeed"
