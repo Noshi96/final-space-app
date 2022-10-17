@@ -8,7 +8,7 @@ import useModal from '../../hooks/useModal'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import { useEffect, useState } from 'react'
 
-export default function Characters({ characters, episodes }) {
+export default function Characters ({ characters, episodes }) {
   const { isOpen, toggle } = useModal()
   const [searchQuery, setSearchQuery] = useState('')
   const [filteredCharacters, setFilteredCharacters] = useState(characters)
@@ -23,7 +23,7 @@ export default function Characters({ characters, episodes }) {
 
   return (
     <>
-      <SearchBar setSearchQuery={setSearchQuery} labelName={'character name'} />
+      <SearchBar setSearchQuery={setSearchQuery} labelName='character name' />
       <EpisodesContextProvider episodes={episodes}>
         <button onClick={toggle}>Add Character</button>
         <CharacterList characters={filteredCharacters} />
@@ -33,13 +33,13 @@ export default function Characters({ characters, episodes }) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps () {
   const resDataCharacters = await getCharacters()
   const resDataEpisodes = await getEpisodes()
   return {
     props: {
       characters: resDataCharacters.data,
-      episodes: resDataEpisodes.data,
-    },
+      episodes: resDataEpisodes.data
+    }
   }
 }

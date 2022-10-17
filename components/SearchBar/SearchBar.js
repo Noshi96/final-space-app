@@ -3,20 +3,20 @@ import { Form } from './style'
 
 const SearchBar = ({
   setSearchQuery = () => {},
-  labelName = 'character name',
+  labelName = 'character name'
 }) => (
   <Form>
     <TextField
-      id="search-bar"
-      className="text"
+      id='search-bar'
+      className='text'
       onInput={(e) => {
         e.preventDefault()
         setSearchQuery(e.target.value)
       }}
       label={`Enter a ${labelName}`}
-      variant="outlined"
-      placeholder="Search..."
-      size="small"
+      variant='outlined'
+      placeholder='Search...'
+      size='small'
     />
   </Form>
 )
