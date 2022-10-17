@@ -20,7 +20,7 @@ import RadioGroup from '@mui/material/RadioGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import FormLabel from '@mui/material/FormLabel'
 
-const AddCharacterForm = ({ isOpen, closeModal }) => {
+const CharacterForm = ({ isOpen, closeModal }) => {
   const [name, setName] = useState('')
   const [imgUrl, setImgUrl] = useState(null)
   const [origin, setOrigin] = useState('')
@@ -171,4 +171,4 @@ const AddCharacterForm = ({ isOpen, closeModal }) => {
     )
     : null
 }
-export default AddCharacterForm
+export default CharacterForm

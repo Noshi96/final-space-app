@@ -49,6 +49,11 @@ export const Modal = styled.div`
     0px 8px 8px -4px rgba(16, 24, 40, 0.03);
   border-radius: 24px;
 
+  @media only screen and (max-width: 375px) {
+    width: 14rem;
+    font-size: 0.7rem;
+  }
+
   @media only screen and (min-width: 48rem) {
     width: 19.5rem;
     transform: translate(0%, -50%);
