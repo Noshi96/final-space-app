@@ -7,7 +7,7 @@ const CharacterCard = ({ name, imgUrl, id, singleCharacter }) => {
 
   return (
     <>
-      <Card onClick={toggle}>
+      <Card onClick={toggle} tabIndex={0}>
         <Image src={imgUrl} alt={name} />
         <Name>{name}</Name>
       </Card>

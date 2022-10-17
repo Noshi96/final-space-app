@@ -1,12 +1,12 @@
 /* globals describe, it, expect  */
 
 import { render } from '@testing-library/react'
-import AddCharacterForm from './AddCharacterForm'
+import CharacterForm from './CharacterForm'
 
-describe('AddCharacterForm', () => {
+describe('CharacterForm', () => {
   it('renders form', () => {
     const cardDetailsModal = render(
-      <AddCharacterForm isOpen closeModal={() => {}} />
+      <CharacterForm isOpen closeModal={() => {}} />
     )
     expect(cardDetailsModal.container).toMatchSnapshot()
   })

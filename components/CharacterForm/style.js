@@ -59,6 +59,11 @@ export const Form = styled.form`
     0px 8px 8px -4px rgba(16, 24, 40, 0.03);
   border-radius: 24px;
 
+  @media only screen and (max-width: 375px) {
+    width: 14rem;
+    font-size: 0.8rem;
+  }
+
   @media only screen and (min-width: 48rem) {
     width: 19.5rem;
     margin-left: 2rem;
@@ -84,6 +89,11 @@ export const Modal = styled.div`
   box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
     0px 8px 8px -4px rgba(16, 24, 40, 0.03);
   border-radius: 24px;
+
+  @media only screen and (max-width: 375px) {
+    width: 14rem;
+    font-size: 0.8rem;
+  }
 
   @media only screen and (min-width: 48rem) {
     width: 19.5rem;
