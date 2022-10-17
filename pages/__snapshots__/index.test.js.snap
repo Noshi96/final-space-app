@@ -1,27 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home should render Home page 1`] = `
-<div>
-  <button>
-    Add Character
-  </button>
-  <div
-    class="sc-da2bec26-0 cIXBnP"
-  >
-    <div
-      class="sc-d6cb549b-0 jisOga"
-    >
-      <img
-        alt="Gary Goodspeed"
-        class="sc-d6cb549b-2 cVwxUm"
-        src="https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png"
-      />
-      <div
-        class="sc-d6cb549b-1 dfxNAZ"
-      >
-        Gary Goodspeed
-      </div>
-    </div>
-  </div>
-</div>
-`;
+exports[`Home should render Home page 1`] = `<div />`;
