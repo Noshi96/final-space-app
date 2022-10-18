@@ -7,6 +7,7 @@ import CharacterForm from '../../components/CharacterForm/CharacterForm'
 import useModal from '../../hooks/useModal'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import { useEffect, useState } from 'react'
+import Layout from '../../components/Layout/Layout'
 
 export default function Characters ({ characters, episodes }) {
   const { isOpen, toggle } = useModal()
@@ -22,14 +23,14 @@ export default function Characters ({ characters, episodes }) {
   }, [searchQuery])
 
   return (
-    <>
-      <SearchBar setSearchQuery={setSearchQuery} labelName='character name' />
+    <Layout>
+      <SearchBar setSearchQuery={setSearchQuery} labelName='Find character' />
       <EpisodesContextProvider episodes={episodes}>
         <button onClick={toggle}>Add Character</button>
         <CharacterList characters={filteredCharacters} />
         <CharacterForm isOpen={isOpen} closeModal={toggle} />
       </EpisodesContextProvider>
-    </>
+    </Layout>
   )
 }
 

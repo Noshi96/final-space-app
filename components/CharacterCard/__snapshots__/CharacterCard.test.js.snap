@@ -3,16 +3,16 @@
 exports[`CharacterCard renders character card 1`] = `
 <div>
   <div
-    class="sc-d6cb549b-0 jisOga"
+    class="sc-7d7230a1-0 kNOnuu"
     tabindex="0"
   >
     <img
       alt="Gary Goodspeed"
-      class="sc-d6cb549b-2 cVwxUm"
+      class="sc-7d7230a1-2 TDhcz"
       src="https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png"
     />
     <div
-      class="sc-d6cb549b-1 dfxNAZ"
+      class="sc-7d7230a1-1 eLYphb"
     >
       Gary Goodspeed
     </div>

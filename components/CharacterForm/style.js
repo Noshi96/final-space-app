@@ -60,7 +60,7 @@ export const Form = styled.form`
   border-radius: 24px;
 
   @media only screen and (max-width: 375px) {
-    width: 14rem;
+    width: 13rem;
     font-size: 0.8rem;
   }
 
@@ -91,7 +91,7 @@ export const Modal = styled.div`
   border-radius: 24px;
 
   @media only screen and (max-width: 375px) {
-    width: 14rem;
+    width: 13rem;
     font-size: 0.8rem;
   }
 
@@ -121,7 +121,7 @@ export const ButtonDefault = styled.div`
 `
 
 export const Image = styled.img`
-  width: 15rem;
+  width: 14rem;
   border-radius: 24px;
   margin-top: 2rem;
   margin-bottom: -2rem;
