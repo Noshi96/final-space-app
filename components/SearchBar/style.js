@@ -24,13 +24,14 @@ export const WhiteBorderTextField = styled(TextField)`
   & .MuiOutlinedInput-root {
     &.Mui-focused fieldset {
       border-color: #fff;
+      color: #fff;
     }
     border-color: #fff;
     color: #fff;
   }
 
   & .MuiFormLabel-root {
-    color: #fff;
+    color: #fff !important;
   }
 
   & .MuiOutlinedInput-root fieldset {
