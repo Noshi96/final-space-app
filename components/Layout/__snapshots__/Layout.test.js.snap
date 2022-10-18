@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home should render Home page 1`] = `
+exports[`Layout should render Layout 1`] = `
 <div>
   <header
     class="sc-75d2f2ff-0 fbiUAK"
@@ -65,50 +65,5 @@ exports[`Home should render Home page 1`] = `
       </nav>
     </div>
   </header>
-  <main>
-    <section
-      class="sc-e79cba3d-0 fnqIxU"
-    >
-      <div
-        class="sc-e79cba3d-1 kmsZdV"
-      >
-        <div
-          class="sc-e79cba3d-2 gQtMgw"
-        >
-          <h1
-            class="sc-e79cba3d-3 fRElsF"
-          >
-            Check out your 
-            <span>
-              favorite
-            </span>
-             heroes from series and play
-             
-            <span>
-              games
-            </span>
-          </h1>
-          <p
-            class="sc-e79cba3d-4 KpaWK"
-          >
-            Learn more about 
-            <span>
-              universum
-            </span>
-          </p>
-          <button
-            class="sc-e79cba3d-5 halYEC"
-          >
-            Click here
-          </button>
-        </div>
-        <img
-          alt="final-space-wallpaper"
-          class="sc-e79cba3d-6 dLiPAo"
-          src="https://images5.alphacoders.com/105/1055769.jpg"
-        />
-      </div>
-    </section>
-  </main>
 </div>
 `;

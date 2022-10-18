@@ -11,11 +11,13 @@ export const Hero = styled.div`
   padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr;
-  align-items: center;
+  align-items: flex-end;
   gap: 9.6rem;
+  margin-bottom: 9rem;
 
   @media only screen and (min-width: 58rem) {
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 `
 
@@ -46,13 +48,19 @@ export const HeroDescription = styled.p`
   span {
     color: #fdac56;
     font-weight: 600;
-    font-size: 2.6rem;
+    font-size: 1.5rem;
   }
 
   @media only screen and (min-width: 48rem) {
     font-size: 2rem;
     line-height: 1.6;
     margin-bottom: 2.2rem;
+
+    span {
+      color: #fdac56;
+      font-weight: 600;
+      font-size: 2.6rem;
+    }
   }
 `
 
@@ -86,7 +94,7 @@ export const LearnMoreButton = styled.button`
 
 export const Image = styled.img`
   z-index: -1;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

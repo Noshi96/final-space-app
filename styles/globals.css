@@ -4,7 +4,14 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #F7F7F7;
+  background-image: url('https://images6.alphacoders.com/105/1055763.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+html {
+  width: 100%;
 }
 
 h1,

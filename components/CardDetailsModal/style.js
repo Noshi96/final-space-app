@@ -50,7 +50,7 @@ export const Modal = styled.div`
   border-radius: 24px;
 
   @media only screen and (max-width: 375px) {
-    width: 14rem;
+    width: 13rem;
     font-size: 0.7rem;
   }
 

@@ -1,3 +1,4 @@
+import Layout from '../components/Layout/Layout'
 import {
   Image,
   SectionHero,
@@ -9,7 +10,7 @@ import {
 } from './style'
 export default function Home () {
   return (
-    <>
+    <Layout title='Final space'>
       <main>
         <SectionHero>
           <Hero>
@@ -30,6 +31,6 @@ export default function Home () {
           </Hero>
         </SectionHero>
       </main>
-    </>
+    </Layout>
   )
 }

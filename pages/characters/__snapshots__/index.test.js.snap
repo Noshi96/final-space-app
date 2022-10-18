@@ -2,11 +2,74 @@
 
 exports[`Characters should render Characters page 1`] = `
 <div>
-  <form
-    class="sc-a77d193a-0 gnEPue"
+  <header
+    class="sc-75d2f2ff-0 fbiUAK"
   >
     <div
-      class="MuiFormControl-root MuiTextField-root text css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+      class="sc-75d2f2ff-1 gMhXdr"
+    >
+      <a
+        class="sc-75d2f2ff-2 QLpgX"
+        href="/"
+      >
+        <img
+          alt="final-space-text"
+          class="sc-75d2f2ff-3 fcosyw"
+          src="https://images.fanart.tv/fanart/final-space-5e6df59bd745e.png"
+        />
+      </a>
+      <nav>
+        <div
+          class="sc-2fc18e3d-0 aplpR"
+        >
+          <div />
+          <div />
+          <div />
+        </div>
+        <ul
+          class="sc-3413b2c7-0 kWOcCk"
+        >
+          <li>
+            <a
+              class="sc-3413b2c7-1 cPDNgh"
+              href="/characters"
+            >
+              Characters
+            </a>
+          </li>
+          <li>
+            <a
+              class="sc-3413b2c7-1 cPDNgh"
+              href="/characters"
+            >
+              Episodes
+            </a>
+          </li>
+          <li>
+            <a
+              class="sc-3413b2c7-1 cPDNgh"
+              href="/characters"
+            >
+              Info
+            </a>
+          </li>
+          <li>
+            <a
+              class="sc-3413b2c7-1 cPDNgh"
+              href="/characters"
+            >
+              Games
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <form
+    class="sc-87828ea6-0 dCRZbz"
+  >
+    <div
+      class="MuiFormControl-root MuiTextField-root sc-87828ea6-3 clCudU text css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     >
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
@@ -14,19 +77,28 @@ exports[`Characters should render Characters page 1`] = `
         for="search-bar"
         id="search-bar-label"
       >
-        Enter a character name
+        Find character
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedEnd css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedEnd css-19qh8xo-MuiInputBase-input-MuiOutlinedInput-input"
           id="search-bar"
           placeholder="Search..."
           type="text"
           value=""
         />
+        <div
+          class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeSmall css-1laqsz7-MuiInputAdornment-root"
+        >
+          <span
+            class="material-icons sc-87828ea6-2 fclgHa"
+          >
+            search
+          </span>
+        </div>
         <fieldset
           aria-hidden="true"
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
@@ -35,7 +107,7 @@ exports[`Characters should render Characters page 1`] = `
             class="css-yjsfm1"
           >
             <span>
-              Enter a character name
+              Find character
             </span>
           </legend>
         </fieldset>
@@ -49,16 +121,16 @@ exports[`Characters should render Characters page 1`] = `
     class="sc-da2bec26-0 cIXBnP"
   >
     <div
-      class="sc-d6cb549b-0 jisOga"
+      class="sc-7d7230a1-0 kNOnuu"
       tabindex="0"
     >
       <img
         alt="Gary Goodspeed"
-        class="sc-d6cb549b-2 cVwxUm"
+        class="sc-7d7230a1-2 TDhcz"
         src="https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png"
       />
       <div
-        class="sc-d6cb549b-1 dfxNAZ"
+        class="sc-7d7230a1-1 eLYphb"
       >
         Gary Goodspeed
       </div>
