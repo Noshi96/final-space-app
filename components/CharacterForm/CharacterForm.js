@@ -13,12 +13,15 @@ import {
 } from './style'
 import { createPortal } from 'react-dom'
 import IconList from '../IconList/IconList'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import TextField from '@mui/material/TextField'
 import Radio from '@mui/material/Radio'
 import RadioGroup from '@mui/material/RadioGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import FormLabel from '@mui/material/FormLabel'
+import { ulid } from 'ulid'
+
+import NewCharactersContext from '../../store/new-characters-context'
 
 const CharacterForm = ({ isOpen, closeModal }) => {
   const [name, setName] = useState('')
@@ -28,6 +31,36 @@ const CharacterForm = ({ isOpen, closeModal }) => {
   const [status, setStatus] = useState('')
   const [species, setSpecies] = useState('')
   const [occurrence, setOccurrence] = useState('')
+
+  const newCharacter = {
+    id: ulid(),
+    name,
+    img_url: imgUrl,
+    origin,
+    gender,
+    status,
+    species,
+    occurrence
+  }
+
+  const newCharactersCtx = useContext(NewCharactersContext)
+
+  const onSubmitHandler = (e) => {
+    console.log('Submit1')
+    e.preventDefault()
+    console.log('Submit2')
+    newCharactersCtx.reloadNewCharacters(newCharacter)
+    console.log('Submit3')
+
+    closeModal()
+  }
+
+  const check = (e) => {
+    e.preventDefault()
+    console.log(newCharactersCtx.newCharacters)
+  }
+
+  const stopPropagationHandler = (e) => e.stopPropagation()
 
   const onInputChangeSetString = (event, setFunction) => {
     setFunction(event.target.value)
@@ -44,15 +77,16 @@ const CharacterForm = ({ isOpen, closeModal }) => {
           role='dialog'
           onClick={closeModal}
         >
-          <ModalImageTextForm onClick={(e) => e.stopPropagation()}>
+          <ModalImageTextForm>
             <Image
               src={
                   imgUrl ??
                   'https://resources.trifocal.eu.com/wp-content/uploads/2018/06/temp-logo-img.png'
                 }
               alt={name}
+              onClick={stopPropagationHandler}
             />
-            <Modal>
+            <Modal onClick={stopPropagationHandler}>
               <Name>
                 {name}
                 {gender !== 'Male' && gender !== 'Female'
@@ -70,7 +104,7 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                 occurrence={occurrence}
               />
             </Modal>
-            <Form>
+            <Form onClick={stopPropagationHandler} onSubmit={onSubmitHandler}>
               <ModalHeader>
                 <ModalCloseButton
                   type='button'
@@ -81,12 +115,12 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                   <StyledIcon name='close' />
                 </ModalCloseButton>
               </ModalHeader>
-
               <TextField
                 id='name'
                 label='Name'
                 variant='standard'
                 onChange={(e) => onInputChangeSetString(e, setName)}
+                inputProps={{ maxLength: 20 }}
               />
               <TextField
                 id='imgUrl'
@@ -99,6 +133,7 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                 label='Origin'
                 variant='standard'
                 onChange={(e) => onInputChangeSetString(e, setOrigin)}
+                inputProps={{ maxLength: 20 }}
               />
               <FormLabel id='gender'>Gender</FormLabel>
               <RadioGroup
@@ -124,7 +159,6 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                   label='Other'
                 />
               </RadioGroup>
-
               <FormLabel id='status'>Status</FormLabel>
               <RadioGroup
                 id='status'
@@ -149,20 +183,29 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                   label='Unknown'
                 />
               </RadioGroup>
-
               <TextField
                 id='species'
                 label='Species'
                 variant='standard'
                 onChange={(e) => onInputChangeSetString(e, setSpecies)}
+                inputProps={{ maxLength: 20 }}
               />
               <TextField
                 id='occurrence'
                 label='Occurrence'
                 variant='standard'
                 onChange={(e) => onInputChangeSetString(e, setOccurrence)}
+                type='number'
+                onInput={(e) => {
+                  e.target.value = Math.max(0, parseInt(e.target.value))
+                    .toString()
+                    .slice(0, 8)
+                }}
               />
-              <AddToFavoriteButton>Add new Character</AddToFavoriteButton>
+              <AddToFavoriteButton type='submit'>
+                Add new Character
+              </AddToFavoriteButton>
+              <button onClick={check}>Check</button>
             </Form>
           </ModalImageTextForm>
         </ModalWrapper>

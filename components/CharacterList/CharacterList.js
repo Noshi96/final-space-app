@@ -1,11 +1,13 @@
 import { List } from './style'
 import CharacterCard from '../CharacterCard/CharacterCard'
+import NewCharacterCard from '../NewCharacterCard/NewCharacterCard'
 
 const CharacterList = ({ characters }) => {
   if (!characters || characters.length === 0) return null
 
   return (
     <List>
+      <NewCharacterCard />
       {characters.map((singleCharacter) => {
         return (
           <CharacterCard

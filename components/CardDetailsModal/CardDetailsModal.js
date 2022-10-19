@@ -25,6 +25,8 @@ const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
   } = singleCharacter
   const { occurrenceOfAllCharactersInAllEpisodes } = useContext(EpisodesContext)
   const countOccurrence = occurrenceOfAllCharactersInAllEpisodes[id] ?? 0
+  const newCountOccurrence =
+    countOccurrence === 0 ? singleCharacter.occurrence : countOccurrence
 
   return isOpen
     ? createPortal(
@@ -65,7 +67,7 @@ const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
               origin={origin}
               status={status}
               species={species}
-              occurrence={countOccurrence}
+              occurrence={newCountOccurrence}
             />
             <AddToFavoriteButton>Add to favorite</AddToFavoriteButton>
           </Modal>
