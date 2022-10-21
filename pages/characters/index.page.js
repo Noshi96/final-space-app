@@ -1,4 +1,5 @@
 import { getCharacters, getEpisodes } from '../../services/external-api'
+import { getNewCharacters } from '../../services/internal-api'
 // import dummy from '../../dummy.json'
 // import dummyEpisode from '../../dummy-episode.json'
 import CharacterList from '../../components/CharacterList/CharacterList'
@@ -9,7 +10,7 @@ import SearchBar from '../../components/SearchBar/SearchBar'
 import { useEffect, useState } from 'react'
 import Layout from '../../components/Layout/Layout'
 
-export default function Characters ({ characters, episodes }) {
+export default function Characters ({ characters, episodes, newCharacters }) {
   const { isOpen, toggle } = useModal()
   const [searchQuery, setSearchQuery] = useState('')
   const [filteredCharacters, setFilteredCharacters] = useState(characters)
@@ -22,8 +23,15 @@ export default function Characters ({ characters, episodes }) {
     )
   }, [searchQuery])
 
+  const checkDb = async () => {
+    const { data } = await getNewCharacters()
+    console.log(data)
+    console.log(newCharacters)
+  }
+
   return (
     <Layout>
+      <button onClick={checkDb}>Check DB</button>
       <SearchBar setSearchQuery={setSearchQuery} labelName='Find character' />
       <EpisodesContextProvider episodes={episodes}>
         <button onClick={toggle}>Add Character</button>
@@ -37,10 +45,12 @@ export default function Characters ({ characters, episodes }) {
 export async function getServerSideProps () {
   const resDataCharacters = await getCharacters()
   const resDataEpisodes = await getEpisodes()
+  const resDataNewCharacters = await getNewCharacters()
   return {
     props: {
       characters: resDataCharacters.data,
-      episodes: resDataEpisodes.data
+      episodes: resDataEpisodes.data,
+      newCharacters: resDataNewCharacters.data
     }
   }
 }
