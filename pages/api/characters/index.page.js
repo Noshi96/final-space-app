@@ -1,8 +1,12 @@
 import { dbConnect, dbPrefix } from '../../../utils/dbClient'
-import { ref, child, get } from 'firebase/database'
+import { ref, child, get, update } from 'firebase/database'
+import { ulid } from 'ulid'
+import { AddNewCharacterSchema } from '../../../schema/addNewCharacter.schema'
+import schemaValidator from '../../../utils/schemaValidator'
 
 const handlers = {
-  get: getCharacters
+  get: getCharacters,
+  post: addCharacter
 }
 
 export default async function handler (req, res) {
@@ -37,4 +41,24 @@ async function getCharacters (req, res, database, dbPrefix) {
   }))
 
   res.json(data)
+}
+
+async function addCharacter (req, res, database, dbPrefix) {
+  const data = req.body
+  console.log('data')
+  console.log(data)
+  const validate = schemaValidator(AddNewCharacterSchema)
+  const valid = validate(data)
+
+  if (!valid) {
+    res.status(400).json({
+      message: 'Bad request',
+      errors: validate.errors
+    })
+    res.end()
+  } else {
+    console.log(data)
+    await update(child(ref(database), `${dbPrefix}/characters/${ulid()}`), data)
+    res.status(204).end()
+  }
 }

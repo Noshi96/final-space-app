@@ -8,6 +8,8 @@ import {
   HeroDescription,
   LearnMoreButton
 } from './style'
+import { getCheck } from '../services/internal-api'
+
 export default function Home () {
   return (
     <Layout title='Final space'>
@@ -16,6 +18,7 @@ export default function Home () {
           <Hero>
             <HeroTextBox>
               <HeadingPrimary>
+                <button onClick={getCheck}>Elo</button>
                 Check out your <span>favorite</span> heroes from series and play{' '}
                 <span>games</span>
               </HeadingPrimary>

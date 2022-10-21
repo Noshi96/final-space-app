@@ -1,26 +1,26 @@
-import { createContext, useState } from 'react'
+import { createContext } from 'react'
+import { getNewCharacters } from '../services/internal-api'
 
 const NewCharactersContext = createContext({
-  newCharacters: [],
-  reloadNewCharacters: () => {}
+  reloadNewCharacters: () => {},
+  characters: []
 })
 
 export const NewCharactersContextProvider = ({
-  newCharactersList,
+  characters,
   children,
-  setLocalStorage
+  setAllCharacters
 }) => {
-  const [newCharacters, setNewCharacters] = useState(newCharactersList)
-
-  // setNewCharacters seems unnecessary, but it probably refreshes the context
-  const reloadNewCharacters = (newCharacter) => {
-    const combinedCharacters = [newCharacter, ...newCharacters]
-    setLocalStorage(combinedCharacters)
-    setNewCharacters(combinedCharacters)
+  const reloadNewCharacters = async () => {
+    try {
+      const { data } = await getNewCharacters()
+      setAllCharacters([...data.reverse(), ...characters])
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   const context = {
-    newCharacters,
     reloadNewCharacters
   }
 

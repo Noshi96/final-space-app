@@ -19,9 +19,8 @@ import Radio from '@mui/material/Radio'
 import RadioGroup from '@mui/material/RadioGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import FormLabel from '@mui/material/FormLabel'
-import { ulid } from 'ulid'
-
 import NewCharactersContext from '../../store/new-characters-context'
+import { addNewCharacter } from '../../services/internal-api'
 
 const CharacterForm = ({ isOpen, closeModal }) => {
   const [name, setName] = useState('')
@@ -33,7 +32,6 @@ const CharacterForm = ({ isOpen, closeModal }) => {
   const [occurrence, setOccurrence] = useState('')
 
   const newCharacter = {
-    id: ulid(),
     name,
     img_url: imgUrl,
     origin,
@@ -45,19 +43,16 @@ const CharacterForm = ({ isOpen, closeModal }) => {
 
   const newCharactersCtx = useContext(NewCharactersContext)
 
-  const onSubmitHandler = (e) => {
-    console.log('Submit1')
+  const addCharacterHandler = async (e) => {
     e.preventDefault()
-    console.log('Submit2')
-    newCharactersCtx.reloadNewCharacters(newCharacter)
-    console.log('Submit3')
-
-    closeModal()
-  }
-
-  const check = (e) => {
-    e.preventDefault()
-    console.log(newCharactersCtx.newCharacters)
+    try {
+      await addNewCharacter(newCharacter)
+      newCharactersCtx.reloadNewCharacters()
+      // newCharactersCtx.setUpdateUi()
+      closeModal()
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   const stopPropagationHandler = (e) => e.stopPropagation()
@@ -104,7 +99,7 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                 occurrence={occurrence}
               />
             </Modal>
-            <Form onClick={stopPropagationHandler} onSubmit={onSubmitHandler}>
+            <Form onClick={stopPropagationHandler}>
               <ModalHeader>
                 <ModalCloseButton
                   type='button'
@@ -116,6 +111,7 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                 </ModalCloseButton>
               </ModalHeader>
               <TextField
+                required
                 id='name'
                 label='Name'
                 variant='standard'
@@ -123,12 +119,14 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                 inputProps={{ maxLength: 20 }}
               />
               <TextField
+                required
                 id='imgUrl'
                 label='Image URL'
                 variant='standard'
                 onChange={(e) => onInputChangeSetString(e, setImgUrl)}
               />
               <TextField
+                required
                 id='origin'
                 label='Origin'
                 variant='standard'
@@ -184,6 +182,7 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                 />
               </RadioGroup>
               <TextField
+                required
                 id='species'
                 label='Species'
                 variant='standard'
@@ -191,6 +190,7 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                 inputProps={{ maxLength: 20 }}
               />
               <TextField
+                required
                 id='occurrence'
                 label='Occurrence'
                 variant='standard'
@@ -202,10 +202,9 @@ const CharacterForm = ({ isOpen, closeModal }) => {
                     .slice(0, 8)
                 }}
               />
-              <AddToFavoriteButton type='submit'>
+              <AddToFavoriteButton onClick={addCharacterHandler}>
                 Add new Character
               </AddToFavoriteButton>
-              <button onClick={check}>Check</button>
             </Form>
           </ModalImageTextForm>
         </ModalWrapper>
