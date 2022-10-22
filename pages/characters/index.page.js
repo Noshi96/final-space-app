@@ -3,8 +3,6 @@ import {
   getCharacters,
   getEpisodes
 } from '../../services/internal-api'
-// import dummy from '../../dummy.json'
-// import dummyEpisode from '../../dummy-episode.json'
 import CharacterList from '../../components/CharacterList/CharacterList'
 import { EpisodesContextProvider } from '../../store/episodes-context'
 import { NewCharactersContextProvider } from '../../store/new-characters-context'

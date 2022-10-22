@@ -11,13 +11,17 @@ export const Hero = styled.div`
   padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr;
-  align-items: flex-end;
   gap: 9.6rem;
+  align-items: center;
   margin-bottom: 9rem;
 
   @media only screen and (min-width: 58rem) {
     grid-template-columns: 1fr 1fr;
     align-items: center;
+  }
+
+  @media only screen and (max-width: 24rem) {
+    align-items: flex-end;
   }
 `
 

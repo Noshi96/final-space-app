@@ -12,6 +12,7 @@ export const Card = styled.div`
   cursor: pointer;
   transition: all 0.4s;
   width: 12rem;
+  height: 16rem;
   background: #ffffffba;
 
   &:hover {
@@ -20,6 +21,7 @@ export const Card = styled.div`
 
   @media only screen and (min-width: 48rem) {
     width: 16rem;
+    height: 100%;
   }
 `
 export const Name = styled.div`

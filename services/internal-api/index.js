@@ -1,7 +1,5 @@
 import axios from 'axios'
 
-const dbPrefix = process.env.NEXT_PUBLIC_DB_PREFIX
-
 const getBaseURL = () => {
   if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') {
     return 'https://final-space-app.vercel.app'
@@ -28,14 +26,6 @@ const instanceFinalSpace = axios.create({
   responseType: 'json',
   withCredentials: false
 })
-
-export const getCheck = () => {
-  console.log(process.env.NEXT_PUBLIC_VERCEL_ENV)
-  console.log(process.env.NEXT_PUBLIC_VERCEL_URL)
-  console.log(dbPrefix)
-  console.log(process.env.NEXT_PUBLIC_DB_PREFIX)
-  console.log(process.env.VERCEL_GIT_COMMIT_REF)
-}
 
 export const getNewCharacters = async (...args) => {
   return axiosInstance.get('/api/characters', {
