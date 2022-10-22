@@ -66,10 +66,10 @@ exports[`Characters should render Characters page 1`] = `
     </div>
   </header>
   <form
-    class="sc-87828ea6-0 dCRZbz"
+    class="sc-b08f511c-0 eTdAoW"
   >
     <div
-      class="MuiFormControl-root MuiTextField-root sc-87828ea6-3 clCudU text css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+      class="MuiFormControl-root MuiTextField-root sc-b08f511c-3 bztABp text css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     >
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
@@ -94,7 +94,7 @@ exports[`Characters should render Characters page 1`] = `
           class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeSmall css-1laqsz7-MuiInputAdornment-root"
         >
           <span
-            class="material-icons sc-87828ea6-2 fclgHa"
+            class="material-icons sc-b08f511c-2 eHrgbT"
           >
             search
           </span>
@@ -114,23 +114,55 @@ exports[`Characters should render Characters page 1`] = `
       </div>
     </div>
   </form>
-  <button>
-    Add Character
-  </button>
   <div
     class="sc-da2bec26-0 cIXBnP"
   >
     <div
-      class="sc-7d7230a1-0 kNOnuu"
+      class="sc-bddf278f-0 iXLujA"
+      tabindex="0"
+    >
+      <div
+        class="sc-bddf278f-1 kaRqye"
+      >
+        <div
+          class="sc-bddf278f-2 jgrdui"
+        />
+        <div
+          class="sc-bddf278f-2 sc-bddf278f-3 jgrdui fWnqRP"
+        />
+      </div>
+      <div
+        class="sc-bddf278f-4 dfPjBw"
+      >
+        Add new Character
+      </div>
+    </div>
+    <div
+      class="sc-3ab549e6-0 lnchss"
+      tabindex="0"
+    >
+      <img
+        alt="Catie"
+        class="sc-3ab549e6-2 iaAXlA"
+        src="https://images.pexels.com/photos/45201/kitty-cat-k…jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      />
+      <div
+        class="sc-3ab549e6-1 goeMet"
+      >
+        Catie
+      </div>
+    </div>
+    <div
+      class="sc-3ab549e6-0 lnchss"
       tabindex="0"
     >
       <img
         alt="Gary Goodspeed"
-        class="sc-7d7230a1-2 TDhcz"
+        class="sc-3ab549e6-2 iaAXlA"
         src="https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png"
       />
       <div
-        class="sc-7d7230a1-1 eLYphb"
+        class="sc-3ab549e6-1 goeMet"
       >
         Gary Goodspeed
       </div>

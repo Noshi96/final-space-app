@@ -6,18 +6,23 @@ exports[`CharacterList renders character list 1`] = `
     class="sc-da2bec26-0 cIXBnP"
   >
     <div
-      class="sc-7d7230a1-0 kNOnuu"
+      class="sc-bddf278f-0 iXLujA"
       tabindex="0"
     >
-      <img
-        alt="Gary Goodspeed"
-        class="sc-7d7230a1-2 TDhcz"
-        src="https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png"
-      />
       <div
-        class="sc-7d7230a1-1 eLYphb"
+        class="sc-bddf278f-1 kaRqye"
       >
-        Gary Goodspeed
+        <div
+          class="sc-bddf278f-2 jgrdui"
+        />
+        <div
+          class="sc-bddf278f-2 sc-bddf278f-3 jgrdui fWnqRP"
+        />
+      </div>
+      <div
+        class="sc-bddf278f-4 dfPjBw"
+      >
+        Add new Character
       </div>
     </div>
   </div>

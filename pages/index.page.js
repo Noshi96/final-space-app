@@ -8,6 +8,7 @@ import {
   HeroDescription,
   LearnMoreButton
 } from './style'
+
 export default function Home () {
   return (
     <Layout title='Final space'>

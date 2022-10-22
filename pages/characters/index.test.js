@@ -5,6 +5,19 @@ import { render, waitFor } from '@testing-library/react'
 import Characters from './index.page'
 
 describe('Characters', () => {
+  const newCharacters = [
+    {
+      gender: 'Female',
+      id: '01GFS938JAPCK8ZW24J43XA4AD',
+      img_url:
+        'https://images.pexels.com/photos/45201/kitty-cat-k…jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      name: 'Catie',
+      occurrence: '2',
+      origin: 'Cat planet',
+      species: 'Cat',
+      status: 'Alive'
+    }
+  ]
   const characters = [
     {
       id: 1,
@@ -51,7 +64,11 @@ describe('Characters', () => {
 
   it('should render Characters page', async () => {
     const { container } = render(
-      <Characters characters={characters} episodes={episodes} />
+      <Characters
+        characters={characters}
+        episodes={episodes}
+        newCharacters={newCharacters}
+      />
     )
     await waitFor(() => {
       expect(container).toMatchSnapshot()

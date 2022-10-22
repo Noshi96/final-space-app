@@ -1,14 +1,12 @@
 import { createContext } from 'react'
-import { efficientOccurrenceCounting } from '../utils/efficientOccurrenceCounting'
+import { occurrenceCounting } from '../utils/occurrenceCounting'
 
 const EpisodesContext = createContext({
   occurrenceOfAllCharactersInAllEpisodes: {}
 })
 
 export const EpisodesContextProvider = ({ episodes, children }) => {
-  const occurrenceOfAllCharactersInAllEpisodes = efficientOccurrenceCounting(
-    episodes
-  )
+  const occurrenceOfAllCharactersInAllEpisodes = occurrenceCounting(episodes)
 
   const context = {
     occurrenceOfAllCharactersInAllEpisodes

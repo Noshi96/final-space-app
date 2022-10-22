@@ -59,7 +59,7 @@ export const Form = styled.form`
     0px 8px 8px -4px rgba(16, 24, 40, 0.03);
   border-radius: 24px;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 23.43rem) {
     width: 13rem;
     font-size: 0.8rem;
   }
@@ -90,7 +90,7 @@ export const Modal = styled.div`
     0px 8px 8px -4px rgba(16, 24, 40, 0.03);
   border-radius: 24px;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 24rem) {
     width: 13rem;
     font-size: 0.8rem;
   }

@@ -1,4 +1,4 @@
-export const efficientOccurrenceCounting = (episodes) => {
+export const occurrenceCounting = (episodes) => {
   const countedCharacters = {}
   episodes.forEach((episode) => {
     episode.characters.forEach((singleUrl) => {
