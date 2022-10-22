@@ -5,9 +5,6 @@ module.exports = {
   compiler: {
     styledComponents: true
   },
-  publicRuntimeConfig: {
-    branchName: process.env.VERCEL_GIT_COMMIT_REF
-  },
   async headers () {
     return [
       {

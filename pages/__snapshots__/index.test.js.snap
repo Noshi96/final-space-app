@@ -78,6 +78,9 @@ exports[`Home should render Home page 1`] = `
           <h1
             class="sc-e79cba3d-3 fRElsF"
           >
+            <button>
+              Elo
+            </button>
             Check out your 
             <span>
               favorite

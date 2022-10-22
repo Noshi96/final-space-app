@@ -1,9 +1,5 @@
 import axios from 'axios'
 
-import getConfig from 'next/config'
-
-const { publicRuntimeConfig } = getConfig()
-
 const dbPrefix = process.env.NEXT_PUBLIC_DB_PREFIX
 
 const getBaseURL = () => {
@@ -38,7 +34,7 @@ export const getCheck = () => {
   console.log(process.env.NEXT_PUBLIC_VERCEL_URL)
   console.log(dbPrefix)
   console.log(process.env.NEXT_PUBLIC_DB_PREFIX)
-  console.log(publicRuntimeConfig.branchName)
+  console.log(process.env.VERCEL_GIT_COMMIT_REF)
 }
 
 export const getNewCharacters = async (...args) => {

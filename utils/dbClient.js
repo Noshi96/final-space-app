@@ -1,12 +1,9 @@
 import { initializeApp } from 'firebase/app'
 import { getDatabase } from 'firebase/database'
 
-import getConfig from 'next/config'
-
-const { publicRuntimeConfig } = getConfig()
 const dbPrefix =
   process.env.NEXT_PUBLIC_DB_PREFIX ||
-  publicRuntimeConfig.branchName.replaceAll('/', '-')
+  process.env.VERCEL_GIT_COMMIT_REF.replaceAll('/', '-')
 
 async function dbConnect () {
   const app = initializeApp({
