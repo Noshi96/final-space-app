@@ -3,8 +3,7 @@ import getConfig from 'next/config'
 
 const { publicRuntimeConfig } = getConfig()
 const dbPrefix =
-  process.env.NEXT_PUBLIC_DB_PREFIX ||
-  publicRuntimeConfig.branchName.replaceAll('/', '-')
+  process.env.NEXT_PUBLIC_DB_PREFIX || publicRuntimeConfig.branchName
 
 const getBaseURL = () => {
   if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') {
@@ -17,7 +16,7 @@ const getBaseURL = () => {
 const axiosInstance = axios.create({
   baseURL: getBaseURL(),
   responseType: 'json',
-  withCredentials: true
+  withCredentials: true,
 })
 
 const getApiURL = () => {
@@ -30,7 +29,7 @@ const getApiURL = () => {
 const instanceFinalSpace = axios.create({
   baseURL: getApiURL(),
   responseType: 'json',
-  withCredentials: false
+  withCredentials: false,
 })
 
 export const getCheck = () => {
@@ -43,7 +42,7 @@ export const getCheck = () => {
 
 export const getNewCharacters = async (...args) => {
   return axiosInstance.get('/api/characters', {
-    params: Object.assign({}, ...args)
+    params: Object.assign({}, ...args),
   })
 }
 
