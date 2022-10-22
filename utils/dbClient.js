@@ -1,7 +1,12 @@
 import { initializeApp } from 'firebase/app'
 import { getDatabase } from 'firebase/database'
 
-const dbPrefix = process.env.NEXT_PUBLIC_DB_PREFIX
+import getConfig from 'next/config'
+
+const { publicRuntimeConfig } = getConfig()
+const dbPrefix =
+  process.env.NEXT_PUBLIC_DB_PREFIX ||
+  publicRuntimeConfig.branchName.replaceAll('/', '-')
 
 async function dbConnect () {
   const app = initializeApp({

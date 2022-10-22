@@ -45,8 +45,6 @@ async function getCharacters (req, res, database, dbPrefix) {
 
 async function addCharacter (req, res, database, dbPrefix) {
   const data = req.body
-  console.log('data')
-  console.log(data)
   const validate = schemaValidator(AddNewCharacterSchema)
   const valid = validate(data)
 
@@ -57,7 +55,6 @@ async function addCharacter (req, res, database, dbPrefix) {
     })
     res.end()
   } else {
-    console.log(data)
     await update(child(ref(database), `${dbPrefix}/characters/${ulid()}`), data)
     res.status(204).end()
   }

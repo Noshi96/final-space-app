@@ -1,6 +1,10 @@
 import axios from 'axios'
 
-const dbPrefix = process.env.NEXT_PUBLIC_DB_PREFIXe
+import getConfig from 'next/config'
+
+const { publicRuntimeConfig } = getConfig()
+
+const dbPrefix = process.env.NEXT_PUBLIC_DB_PREFIX
 
 const getBaseURL = () => {
   if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') {
@@ -34,7 +38,7 @@ export const getCheck = () => {
   console.log(process.env.NEXT_PUBLIC_VERCEL_URL)
   console.log(dbPrefix)
   console.log(process.env.NEXT_PUBLIC_DB_PREFIX)
-  // console.log(publicRuntimeConfig.branchName)
+  console.log(publicRuntimeConfig.branchName)
 }
 
 export const getNewCharacters = async (...args) => {

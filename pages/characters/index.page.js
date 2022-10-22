@@ -9,48 +9,21 @@ import CharacterList from '../../components/CharacterList/CharacterList'
 import { EpisodesContextProvider } from '../../store/episodes-context'
 import { NewCharactersContextProvider } from '../../store/new-characters-context'
 import SearchBar from '../../components/SearchBar/SearchBar'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Layout from '../../components/Layout/Layout'
 
 export default function Characters ({ characters, episodes, newCharacters }) {
   const [searchQuery, setSearchQuery] = useState('')
-  const [allCharacters, setAllCharacters] = useState([
-    ...newCharacters.reverse(),
-    ...characters
-  ])
-  const [filteredCharacters, setFilteredCharacters] = useState([
-    ...newCharacters.reverse(),
-    ...characters
-  ])
-
-  useEffect(() => {
-    setFilteredCharacters(allCharacters)
-  }, [allCharacters])
-
-  useEffect(() => {
-    setFilteredCharacters(
-      allCharacters.filter((singleCharacter) =>
-        singleCharacter.name.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    )
-  }, [searchQuery])
-
-  const checkDb = async () => {
-    const { data } = await getNewCharacters()
-    console.log(data)
-    console.log(newCharacters)
-  }
 
   return (
     <Layout>
       <NewCharactersContextProvider
         characters={characters}
-        setAllCharacters={setAllCharacters}
+        newCharacters={newCharacters}
       >
-        <button onClick={checkDb}>Check DB</button>
         <SearchBar setSearchQuery={setSearchQuery} labelName='Find character' />
         <EpisodesContextProvider episodes={episodes}>
-          <CharacterList characters={filteredCharacters} />
+          <CharacterList searchQuery={searchQuery} />
         </EpisodesContextProvider>
       </NewCharactersContextProvider>
     </Layout>

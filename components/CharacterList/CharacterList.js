@@ -1,14 +1,30 @@
 import { List } from './style'
 import CharacterCard from '../CharacterCard/CharacterCard'
 import NewCharacterCard from '../NewCharacterCard/NewCharacterCard'
+import { useState, useContext, useEffect } from 'react'
+import NewCharactersContext from '../../store/new-characters-context'
 
-const CharacterList = ({ characters }) => {
-  if (!characters || characters.length === 0) return null
+const CharacterList = ({ searchQuery }) => {
+  const newCharactersCtx = useContext(NewCharactersContext)
+  const { characters } = newCharactersCtx
+  const [filteredCharacters, setFilteredCharacters] = useState(characters)
+
+  useEffect(() => {
+    setFilteredCharacters(characters)
+  }, [characters])
+
+  useEffect(() => {
+    setFilteredCharacters(
+      characters.filter((singleCharacter) =>
+        singleCharacter.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    )
+  }, [searchQuery])
 
   return (
     <List>
       <NewCharacterCard />
-      {characters.map((singleCharacter) => {
+      {filteredCharacters.map((singleCharacter) => {
         return (
           <CharacterCard
             key={singleCharacter.id}
