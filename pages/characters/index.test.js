@@ -15,8 +15,8 @@ describe('Characters', () => {
       occurrence: '2',
       origin: 'Cat planet',
       species: 'Cat',
-      status: 'Alive',
-    },
+      status: 'Alive'
+    }
   ]
   const characters = [
     {
@@ -35,11 +35,11 @@ describe('Characters', () => {
         'Weapons: Black hole gun (briefly)',
         'Weapons: Robot arm',
         'Weapons: Laser gun',
-        'Weapons: Laser sword',
+        'Weapons: Laser sword'
       ],
       img_url:
-        'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png',
-    },
+        'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png'
+    }
   ]
 
   const episodes = [
@@ -56,10 +56,10 @@ describe('Characters', () => {
         'https://finalspaceapi.com/api/v0/character/5',
         'https://finalspaceapi.com/api/v0/character/6',
         'https://finalspaceapi.com/api/v0/character/9',
-        'https://finalspaceapi.com/api/v0/character/11',
+        'https://finalspaceapi.com/api/v0/character/11'
       ],
-      img_url: 'http://finalspaceapi.com/api/episode/image/chapter1.jpg',
-    },
+      img_url: 'http://finalspaceapi.com/api/episode/image/chapter1.jpg'
+    }
   ]
 
   it('should render Characters page', async () => {
