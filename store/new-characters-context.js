@@ -3,13 +3,13 @@ import { getNewCharacters } from '../services/internal-api'
 
 const NewCharactersContext = createContext({
   reloadNewCharacters: () => {},
-  characters: [],
+  characters: []
 })
 
 export const NewCharactersContextProvider = ({
   characters,
   children,
-  setAllCharacters,
+  setAllCharacters
 }) => {
   const reloadNewCharacters = async () => {
     try {
@@ -21,7 +21,7 @@ export const NewCharactersContextProvider = ({
   }
 
   const context = {
-    reloadNewCharacters,
+    reloadNewCharacters
   }
 
   return (
