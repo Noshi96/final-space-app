@@ -5,6 +5,19 @@ import { render, waitFor } from '@testing-library/react'
 import Characters from './index.page'
 
 describe('Characters', () => {
+  const newCharacters = [
+    {
+      gender: 'Female',
+      id: '01GFS938JAPCK8ZW24J43XA4AD',
+      img_url:
+        'https://images.pexels.com/photos/45201/kitty-cat-k…jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      name: 'Catie',
+      occurrence: '2',
+      origin: 'Cat planet',
+      species: 'Cat',
+      status: 'Alive',
+    },
+  ]
   const characters = [
     {
       id: 1,
@@ -22,11 +35,11 @@ describe('Characters', () => {
         'Weapons: Black hole gun (briefly)',
         'Weapons: Robot arm',
         'Weapons: Laser gun',
-        'Weapons: Laser sword'
+        'Weapons: Laser sword',
       ],
       img_url:
-        'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png'
-    }
+        'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png',
+    },
   ]
 
   const episodes = [
@@ -43,15 +56,19 @@ describe('Characters', () => {
         'https://finalspaceapi.com/api/v0/character/5',
         'https://finalspaceapi.com/api/v0/character/6',
         'https://finalspaceapi.com/api/v0/character/9',
-        'https://finalspaceapi.com/api/v0/character/11'
+        'https://finalspaceapi.com/api/v0/character/11',
       ],
-      img_url: 'http://finalspaceapi.com/api/episode/image/chapter1.jpg'
-    }
+      img_url: 'http://finalspaceapi.com/api/episode/image/chapter1.jpg',
+    },
   ]
 
   it('should render Characters page', async () => {
     const { container } = render(
-      <Characters characters={characters} episodes={episodes} />
+      <Characters
+        characters={characters}
+        episodes={episodes}
+        newCharacters={newCharacters}
+      />
     )
     await waitFor(() => {
       expect(container).toMatchSnapshot()
