@@ -44,3 +44,17 @@ export const getCharacters = async () => {
 export const getEpisodes = async () => {
   return instanceFinalSpace.get('/episode')
 }
+
+export const getFavorites = async (...args) => {
+  return axiosInstance.get('/api/favorites', {
+    params: Object.assign({}, ...args)
+  })
+}
+
+export const addToFavorites = async (updatedFavoritesObject) => {
+  return axiosInstance.post('/api/favorites', updatedFavoritesObject)
+}
+
+export const deleteFromFavorites = async (id) => {
+  return axiosInstance.delete('/api/favorites', { data: id })
+}

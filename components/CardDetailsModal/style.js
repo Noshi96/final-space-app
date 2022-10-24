@@ -103,6 +103,14 @@ export const Name = styled.h2`
   }
 `
 
+export const StyledFavorite = styled(Icon)`
+  margin-right: 0.8rem;
+  width: 24px;
+  height: 24px;
+  color: #7f56d9;
+  margin-bottom: 0.3rem;
+`
+
 export const StyledIcon = styled(Icon)`
   margin-right: 0.8rem;
   color: ${(props) =>

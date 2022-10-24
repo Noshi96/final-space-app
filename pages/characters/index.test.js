@@ -62,12 +62,18 @@ describe('Characters', () => {
     }
   ]
 
+  const favorites = [
+    { fav: true, id: '01GFYJZKSWXJ4YBFAPVAQX5K90' },
+    { fav: true, id: '01GFYPHY17W4W4HSV4NK5MBJ44' }
+  ]
+
   it('should render Characters page', async () => {
     const { container } = render(
       <Characters
         characters={characters}
         episodes={episodes}
         newCharacters={newCharacters}
+        favorites={favorites}
       />
     )
     await waitFor(() => {
