@@ -67,20 +67,17 @@ exports[`Home should render Home page 1`] = `
   </header>
   <main>
     <section
-      class="sc-e79cba3d-0 fnqIxU"
+      class="sc-d7ef5778-0 hJbPwZ"
     >
       <div
-        class="sc-e79cba3d-1 kmsZdV"
+        class="sc-d7ef5778-1 fWHLxd"
       >
         <div
-          class="sc-e79cba3d-2 gQtMgw"
+          class="sc-d7ef5778-2 hyAtHl"
         >
           <h1
-            class="sc-e79cba3d-3 fRElsF"
+            class="sc-d7ef5778-3 iLSkHc"
           >
-            <button>
-              Elo
-            </button>
             Check out your 
             <span>
               favorite
@@ -92,7 +89,7 @@ exports[`Home should render Home page 1`] = `
             </span>
           </h1>
           <p
-            class="sc-e79cba3d-4 KpaWK"
+            class="sc-d7ef5778-4 cFOEaL"
           >
             Learn more about 
             <span>
@@ -100,14 +97,14 @@ exports[`Home should render Home page 1`] = `
             </span>
           </p>
           <button
-            class="sc-e79cba3d-5 halYEC"
+            class="sc-d7ef5778-5 dvncD"
           >
             Click here
           </button>
         </div>
         <img
           alt="final-space-wallpaper"
-          class="sc-e79cba3d-6 dLiPAo"
+          class="sc-d7ef5778-6 dhGlcp"
           src="https://images5.alphacoders.com/105/1055769.jpg"
         />
       </div>

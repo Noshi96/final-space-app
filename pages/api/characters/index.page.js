@@ -39,7 +39,6 @@ async function getCharacters (req, res, database, dbPrefix) {
     ...snapshotValue[key],
     id: key
   }))
-
   res.json(data)
 }
 

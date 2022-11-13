@@ -1,7 +1,8 @@
 import {
   getNewCharacters,
   getCharacters,
-  getEpisodes
+  getEpisodes,
+  getFavorites
 } from '../../services/internal-api'
 import CharacterList from '../../components/CharacterList/CharacterList'
 import { EpisodesContextProvider } from '../../store/episodes-context'
@@ -9,8 +10,14 @@ import { NewCharactersContextProvider } from '../../store/new-characters-context
 import SearchBar from '../../components/SearchBar/SearchBar'
 import { useState } from 'react'
 import Layout from '../../components/Layout/Layout'
+import { FavoritesContextProvider } from '../../store/favorites-context'
 
-export default function Characters ({ characters, episodes, newCharacters }) {
+export default function Characters ({
+  characters,
+  episodes,
+  newCharacters,
+  favorites
+}) {
   const [searchQuery, setSearchQuery] = useState('')
 
   return (
@@ -19,10 +26,15 @@ export default function Characters ({ characters, episodes, newCharacters }) {
         characters={characters}
         newCharacters={newCharacters}
       >
-        <SearchBar setSearchQuery={setSearchQuery} labelName='Find character' />
-        <EpisodesContextProvider episodes={episodes}>
-          <CharacterList searchQuery={searchQuery} />
-        </EpisodesContextProvider>
+        <FavoritesContextProvider favorites={favorites}>
+          <SearchBar
+            setSearchQuery={setSearchQuery}
+            labelName='Find character'
+          />
+          <EpisodesContextProvider episodes={episodes}>
+            <CharacterList searchQuery={searchQuery} />
+          </EpisodesContextProvider>
+        </FavoritesContextProvider>
       </NewCharactersContextProvider>
     </Layout>
   )
@@ -32,11 +44,13 @@ export async function getServerSideProps () {
   const resDataCharacters = await getCharacters()
   const resDataEpisodes = await getEpisodes()
   const resDataNewCharacters = await getNewCharacters()
+  const resDataFavorites = await getFavorites()
   return {
     props: {
       characters: resDataCharacters.data,
       episodes: resDataEpisodes.data,
-      newCharacters: resDataNewCharacters.data
+      newCharacters: resDataNewCharacters.data,
+      favorites: resDataFavorites.data
     }
   }
 }

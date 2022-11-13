@@ -7,12 +7,18 @@ import {
   Image,
   StyledIcon,
   Name,
-  AddToFavoriteButton
+  AddToFavoriteButton,
+  StyledFavorite
 } from './style'
 import { createPortal } from 'react-dom'
 import EpisodesContext from '../../store/episodes-context'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import IconList from '../IconList/IconList'
+import FavoritesContext from '../../store/favorites-context'
+import {
+  addToFavorites,
+  deleteFromFavorites
+} from '../../services/internal-api'
 
 const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
   const {
@@ -23,10 +29,31 @@ const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
     status,
     species
   } = singleCharacter
+
   const { occurrenceOfAllCharactersInAllEpisodes } = useContext(EpisodesContext)
   const countOccurrence = occurrenceOfAllCharactersInAllEpisodes[id] ?? 0
   const newCountOccurrence =
     countOccurrence === 0 ? singleCharacter.occurrence : countOccurrence
+
+  const { favorites, reloadFavorites } = useContext(FavoritesContext)
+  const isInFavorites = favorites.some((el) => String(el.id) === String(id))
+  const [favorite, setFavorite] = useState(isInFavorites)
+
+  const addToFavoritesHandler = async () => {
+    if (!favorite) {
+      const favoriteObjToAdd = {
+        id,
+        fav: true
+      }
+      setFavorite((prevState) => !prevState)
+      await addToFavorites(favoriteObjToAdd)
+      reloadFavorites()
+    } else {
+      setFavorite((prevState) => !prevState)
+      await deleteFromFavorites({ id })
+      reloadFavorites()
+    }
+  }
 
   return isOpen
     ? createPortal(
@@ -41,6 +68,13 @@ const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
         >
           <Modal onClick={(e) => e.stopPropagation()}>
             <ModalHeader>
+              {favorite
+                ? (
+                  <StyledFavorite name='favorite' />
+                  )
+                : (
+                  <StyledFavorite name='favorite_outlined' />
+                  )}
               <ModalCloseButton
                 type='button'
                 data-dismiss='modal'
@@ -69,7 +103,9 @@ const CardDetailsModal = ({ isOpen, closeModal, id, singleCharacter }) => {
               species={species}
               occurrence={newCountOccurrence}
             />
-            <AddToFavoriteButton>Add to favorite</AddToFavoriteButton>
+            <AddToFavoriteButton onClick={addToFavoritesHandler}>
+              {favorite ? 'Remove from ' : 'Add to '} favorites
+            </AddToFavoriteButton>
           </Modal>
         </ModalWrapper>
       </>,
