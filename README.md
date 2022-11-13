@@ -9,7 +9,7 @@ An application using the public API associated with Final Space animated space o
 ## Branch naming
 
 ```
-Type/TICKET_NAME/branch_name
+Type/TICKET_NAME/short_description
 features/FSA-07/add-hero-page-and-header
 ```
 
