@@ -1,41 +1,41 @@
-import { useState, createContext } from 'react'
+import { useState, createContext } from 'react';
 
-import { getNewCharacters } from '../services/internal-api'
+import { getNewCharacters } from '../services/internal-api';
 
 const NewCharactersContext = createContext({
   reloadNewCharacters: () => {},
-  characters: []
-})
+  characters: [],
+});
 
 export const NewCharactersContextProvider = ({
   characters,
   children,
-  newCharacters
+  newCharacters,
 }) => {
   const [updatedCharacters, setUpdatedCharacters] = useState([
     ...newCharacters.reverse(),
-    ...characters
-  ])
+    ...characters,
+  ]);
 
   const reloadNewCharacters = async () => {
     try {
-      const { data } = await getNewCharacters()
-      setUpdatedCharacters([...data.reverse(), ...characters])
+      const { data } = await getNewCharacters();
+      setUpdatedCharacters([...data.reverse(), ...characters]);
     } catch (err) {
-      console.error(err)
+      console.error(err);
     }
-  }
+  };
 
   const context = {
     reloadNewCharacters,
-    characters: updatedCharacters
-  }
+    characters: updatedCharacters,
+  };
 
   return (
     <NewCharactersContext.Provider value={context}>
       {children}
     </NewCharactersContext.Provider>
-  )
-}
+  );
+};
 
-export default NewCharactersContext
+export default NewCharactersContext;

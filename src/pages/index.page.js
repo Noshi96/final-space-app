@@ -1,4 +1,4 @@
-import Layout from '../components/Layout/Layout'
+import Layout from 'components/Layout/Layout';
 import {
   Image,
   SectionHero,
@@ -6,10 +6,10 @@ import {
   HeroTextBox,
   HeadingPrimary,
   HeroDescription,
-  LearnMoreButton
-} from './style'
+  LearnMoreButton,
+} from './style';
 
-export default function Home () {
+export default function Home() {
   return (
     <Layout title='Final space'>
       <main>
@@ -33,5 +33,5 @@ export default function Home () {
         </SectionHero>
       </main>
     </Layout>
-  )
+  );
 }
