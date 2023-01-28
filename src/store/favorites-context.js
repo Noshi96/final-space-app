@@ -1,6 +1,6 @@
 import { useState, createContext } from 'react';
 
-import { getFavorites } from '../services/internal-api';
+import { getFavorites } from 'services/internal-api';
 
 const FavoritesContext = createContext({
   reloadFavorites: () => {},

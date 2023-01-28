@@ -1,12 +1,14 @@
 import { createContext } from 'react';
-import { occurrenceCounting } from '../../utils/occurrenceCounting';
+import { numberOfAppearancesInAllEpisodes } from 'utils/numberOfAppearancesInAllEpisodes';
 
 const EpisodesContext = createContext({
   occurrenceOfAllCharactersInAllEpisodes: {},
 });
 
 export const EpisodesContextProvider = ({ episodes, children }) => {
-  const occurrenceOfAllCharactersInAllEpisodes = occurrenceCounting(episodes);
+  const occurrenceOfAllCharactersInAllEpisodes = numberOfAppearancesInAllEpisodes(
+    episodes
+  );
 
   const context = {
     occurrenceOfAllCharactersInAllEpisodes,

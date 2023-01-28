@@ -1,6 +1,6 @@
 import { useState, createContext } from 'react';
 
-import { getNewCharacters } from '../services/internal-api';
+import { getNewCharacters } from 'services/internal-api';
 
 const NewCharactersContext = createContext({
   reloadNewCharacters: () => {},
