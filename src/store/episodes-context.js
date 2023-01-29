@@ -1,24 +1,24 @@
-import { createContext } from 'react';
-import { numberOfAppearancesInAllEpisodes } from 'utils/numberOfAppearancesInAllEpisodes';
+import { createContext } from 'react'
+import { numberOfAppearancesInAllEpisodes } from 'utils/numberOfAppearancesInAllEpisodes'
 
 const EpisodesContext = createContext({
-  occurrenceOfAllCharactersInAllEpisodes: {},
-});
+  occurrenceOfAllCharactersInAllEpisodes: {}
+})
 
 export const EpisodesContextProvider = ({ episodes, children }) => {
   const occurrenceOfAllCharactersInAllEpisodes = numberOfAppearancesInAllEpisodes(
     episodes
-  );
+  )
 
   const context = {
-    occurrenceOfAllCharactersInAllEpisodes,
-  };
+    occurrenceOfAllCharactersInAllEpisodes
+  }
 
   return (
     <EpisodesContext.Provider value={context}>
       {children}
     </EpisodesContext.Provider>
-  );
-};
+  )
+}
 
-export default EpisodesContext;
+export default EpisodesContext

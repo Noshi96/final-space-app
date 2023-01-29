@@ -1,9 +1,9 @@
-import { Card, Name, Image } from './style';
-import useModal from 'hooks/useModal';
-import CardDetailsModal from 'components/CardDetailsModal/CardDetailsModal';
+import { Card, Name, Image } from './style'
+import useModal from 'hooks/useModal'
+import CardDetailsModal from 'components/CardDetailsModal/CardDetailsModal'
 
 const CharacterCard = ({ name, imgUrl, id, singleCharacter }) => {
-  const { isOpen, toggle } = useModal();
+  const { isOpen, toggle } = useModal()
 
   return (
     <>
@@ -18,7 +18,7 @@ const CharacterCard = ({ name, imgUrl, id, singleCharacter }) => {
         singleCharacter={singleCharacter}
       />
     </>
-  );
-};
+  )
+}
 
-export default CharacterCard;
+export default CharacterCard
