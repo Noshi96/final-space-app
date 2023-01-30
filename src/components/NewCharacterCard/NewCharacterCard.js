@@ -1,6 +1,6 @@
 import { Card, DrawPlus, Vertical, Horizontal, Name } from './style'
-import CharacterForm from '../CharacterForm/CharacterForm'
-import useModal from '../../hooks/useModal'
+import CharacterForm from 'components/CharacterForm/CharacterForm'
+import useModal from 'hooks/useModal'
 
 const NewCharacterCard = () => {
   const { isOpen, toggle } = useModal()

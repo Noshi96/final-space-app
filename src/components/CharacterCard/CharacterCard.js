@@ -1,6 +1,6 @@
 import { Card, Name, Image } from './style'
-import useModal from '../../hooks/useModal'
-import CardDetailsModal from '../CardDetailsModal/CardDetailsModal'
+import useModal from 'hooks/useModal'
+import CardDetailsModal from 'components/CardDetailsModal/CardDetailsModal'
 
 const CharacterCard = ({ name, imgUrl, id, singleCharacter }) => {
   const { isOpen, toggle } = useModal()
