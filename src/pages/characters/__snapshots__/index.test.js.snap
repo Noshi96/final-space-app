@@ -66,10 +66,10 @@ exports[`Characters should render Characters page 1`] = `
     </div>
   </header>
   <form
-    class="sc-b08f511c-0 eTdAoW"
+    class="sc-2364cced-0 fmRQea"
   >
     <div
-      class="MuiFormControl-root MuiTextField-root sc-b08f511c-3 bztABp text css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+      class="MuiFormControl-root MuiTextField-root sc-2364cced-3 bBcyYR text css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     >
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
@@ -94,7 +94,7 @@ exports[`Characters should render Characters page 1`] = `
           class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeSmall css-1laqsz7-MuiInputAdornment-root"
         >
           <span
-            class="material-icons sc-b08f511c-2 eHrgbT"
+            class="material-icons sc-2364cced-2 OkJHB"
           >
             search
           </span>
