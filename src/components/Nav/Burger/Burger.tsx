@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import RightNav from '../RightNav/RightNav'
-import { StyledBurger } from './style'
+import { useState } from 'react';
+import RightNav from '../RightNav/RightNav';
+import { StyledBurger } from './style';
 
 const Burger = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -17,7 +17,7 @@ const Burger = () => {
       </StyledBurger>
       <RightNav open={open} />
     </>
-  )
-}
+  );
+};
 
-export default Burger
+export default Burger;
