@@ -1,9 +1,10 @@
 /* globals describe, it, expect  */
 
-import { render } from '@testing-library/react'
-import CharacterList from './CharacterList'
+import { render } from '@testing-library/react';
+import CharacterList from './CharacterList';
 
 describe('CharacterList', () => {
+  const searchQuery = 'Gary';
   const characters = [
     {
       id: 1,
@@ -29,7 +30,7 @@ describe('CharacterList', () => {
         'Harry Hoodseed (by Tribore)',
         'Leslie (by Tribore)',
         'Barry (by Tribore)',
-        'The Fool Who Died A Thousand Deaths (by Invictus)'
+        'The Fool Who Died A Thousand Deaths (by Invictus)',
       ],
       origin: 'Earth',
       abilities: [
@@ -40,15 +41,15 @@ describe('CharacterList', () => {
         'Weapons: Black hole gun (briefly)',
         'Weapons: Robot arm',
         'Weapons: Laser gun',
-        'Weapons: Laser sword'
+        'Weapons: Laser sword',
       ],
       img_url:
-        'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png'
-    }
-  ]
+        'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png',
+    },
+  ];
 
   it('renders character list', () => {
-    const characterList = render(<CharacterList characters={characters} />)
-    expect(characterList.container).toMatchSnapshot()
-  })
-})
+    const characterList = render(<CharacterList searchQuery={searchQuery} />);
+    expect(characterList.container).toMatchSnapshot();
+  });
+});
