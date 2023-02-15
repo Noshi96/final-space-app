@@ -11,7 +11,7 @@ interface ICharacterListProps {
 
 const CharacterList = ({ searchQuery }: ICharacterListProps) => {
   const newCharactersCtx = useContext(NewCharactersContext);
-  const characters = (newCharactersCtx.characters as unknown) as IExtendedSingleCharacterModel[];
+  const { characters } = newCharactersCtx;
   const [filteredCharacters, setFilteredCharacters] = useState<
     IExtendedSingleCharacterModel[]
   >(characters);
