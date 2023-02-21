@@ -27,11 +27,11 @@ exports[`Characters should render Characters page 1`] = `
           <div />
         </div>
         <ul
-          class="sc-3413b2c7-0 kWOcCk"
+          class="sc-77d29024-0 ejmOjo"
         >
           <li>
             <a
-              class="sc-3413b2c7-1 cPDNgh"
+              class="sc-77d29024-1 DnjoV"
               href="/characters"
             >
               Characters
@@ -39,7 +39,7 @@ exports[`Characters should render Characters page 1`] = `
           </li>
           <li>
             <a
-              class="sc-3413b2c7-1 cPDNgh"
+              class="sc-77d29024-1 DnjoV"
               href="/characters"
             >
               Episodes
@@ -47,7 +47,7 @@ exports[`Characters should render Characters page 1`] = `
           </li>
           <li>
             <a
-              class="sc-3413b2c7-1 cPDNgh"
+              class="sc-77d29024-1 DnjoV"
               href="/characters"
             >
               Info
@@ -55,7 +55,7 @@ exports[`Characters should render Characters page 1`] = `
           </li>
           <li>
             <a
-              class="sc-3413b2c7-1 cPDNgh"
+              class="sc-77d29024-1 DnjoV"
               href="/characters"
             >
               Games
