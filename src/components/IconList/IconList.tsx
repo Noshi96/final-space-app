@@ -3,7 +3,6 @@ import { List, IconListElement, StyledIcon } from './style';
 interface IIconListProps {
   status: string;
   species: string;
-  gender: string;
   occurrence: number;
   origin: string;
 }

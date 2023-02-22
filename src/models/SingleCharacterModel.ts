@@ -6,4 +6,5 @@ export interface ISingleCharacterModel {
   origin: string;
   species: string;
   status: string;
+  occurrence?: number;
 }
