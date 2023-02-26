@@ -1,7 +1,8 @@
-import styled from 'styled-components'
-import Icon from '../Icon/Icon'
+import { IStyledIconProps } from 'models/IStyledIconProps';
+import styled from 'styled-components';
+import Icon from '../Icon/Icon';
 
-export const StyledIcon = styled(Icon)`
+export const StyledIcon = styled(Icon)<IStyledIconProps>`
   margin-right: 0.8rem;
   color: ${(props) =>
     props.status === 'Alive'
@@ -9,7 +10,7 @@ export const StyledIcon = styled(Icon)`
       : props.status === 'Deceased'
       ? '#2196F3;'
       : '#000;'};
-`
+`;
 
 export const List = styled.ul`
   display: flex;
@@ -19,10 +20,10 @@ export const List = styled.ul`
   margin-right: 1rem;
   padding: 0rem;
   text-decoration: none;
-`
+`;
 
 export const IconListElement = styled.li`
   width: 100%;
   display: flex;
   align-items: center;
-`
+`;
