@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { IRightNavProps } from './RightNav';
 
-export const MainNavList = styled.ul`
+export const MainNavList = styled.ul<IRightNavProps>`
   margin: 0;
   padding: 0;
   list-style: none;
@@ -27,7 +28,7 @@ export const MainNavList = styled.ul`
       color: #fff;
     }
   }
-`
+`;
 
 export const MainNavLink = styled.a`
   display: flex;
@@ -49,4 +50,4 @@ export const MainNavLink = styled.a`
   &:active {
     color: #fdac56;
   }
-`
+`;

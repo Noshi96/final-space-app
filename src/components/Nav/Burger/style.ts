@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { BurgerModel } from './model';
 
-export const StyledBurger = styled.div`
+export const StyledBurger = styled.div<BurgerModel>`
   width: 2rem;
   height: 2rem;
   position: fixed;
@@ -32,4 +33,4 @@ export const StyledBurger = styled.div`
       transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
-`
+`;

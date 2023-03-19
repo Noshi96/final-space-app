@@ -1,7 +1,11 @@
 import { MainNavList, MainNavLink } from './style'
 import Link from 'next/link'
 
-const RightNav = ({ open }) => {
+export interface IRightNavProps {
+  open: boolean
+}
+
+const RightNav = ({ open }: IRightNavProps) => {
   return (
     <MainNavList open={open}>
       <li>

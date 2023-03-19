@@ -11,7 +11,7 @@ import {
 
 export default function Home () {
   return (
-    <Layout title='Final space'>
+    <Layout>
       <main>
         <SectionHero>
           <Hero>

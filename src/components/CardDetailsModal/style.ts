@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import Icon from '../Icon/Icon'
+import { IStyledIconProps } from 'models/IStyledIconProps';
+import styled from 'styled-components';
+import Icon from '../Icon/Icon';
 
 export const ModalOverlay = styled.div`
   position: fixed;
@@ -11,7 +12,7 @@ export const ModalOverlay = styled.div`
   background-color: #000;
   opacity: 0.5;
   overflow: hidden;
-`
+`;
 
 export const ModalWrapper = styled.div`
   position: fixed;
@@ -23,7 +24,7 @@ export const ModalWrapper = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
-`
+`;
 
 export const Modal = styled.div`
   z-index: 100;
@@ -59,7 +60,7 @@ export const Modal = styled.div`
     width: 19.5rem;
     transform: translate(0%, -50%);
   }
-`
+`;
 
 export const ModalHeader = styled.div`
   width: 100%;
@@ -68,18 +69,18 @@ export const ModalHeader = styled.div`
   align-items: center;
   padding-top: 1rem;
   margin-right: -3rem;
-`
+`;
 
 export const ModalCloseButton = styled.button`
   cursor: pointer;
   border: none;
   background: transparent;
-`
+`;
 
 export const ButtonDefault = styled.div`
   background: #247ba0;
   color: #fff;
-`
+`;
 
 export const Image = styled.img`
   width: 160%;
@@ -93,7 +94,7 @@ export const Image = styled.img`
     left: 50%;
     transform: translate(-145%, -50%);
   }
-`
+`;
 
 export const Name = styled.h2`
   margin-top: 1rem;
@@ -101,7 +102,7 @@ export const Name = styled.h2`
   @media only screen and (min-width: 48rem) {
     margin-top: 0rem;
   }
-`
+`;
 
 export const StyledFavorite = styled(Icon)`
   margin-right: 0.8rem;
@@ -109,9 +110,9 @@ export const StyledFavorite = styled(Icon)`
   height: 24px;
   color: #7f56d9;
   margin-bottom: 0.3rem;
-`
+`;
 
-export const StyledIcon = styled(Icon)`
+export const StyledIcon = styled(Icon)<IStyledIconProps>`
   margin-right: 0.8rem;
   color: ${(props) =>
     props.female === 'Female'
@@ -126,7 +127,7 @@ export const StyledIcon = styled(Icon)`
       : props.female === 'Male'
       ? '0.5rem;'
       : '0;'};
-`
+`;
 
 export const AddToFavoriteButton = styled.button`
   display: flex;
@@ -154,4 +155,4 @@ export const AddToFavoriteButton = styled.button`
     border: 1px solid #7f56d9;
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   }
-`
+`;
